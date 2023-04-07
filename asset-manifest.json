@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/bathroom/static/css/main.ccd2e24b.css",
+    "main.js": "/bathroom/static/js/main.b113d511.js",
+    "static/media/bathroom.glb": "/bathroom/static/media/bathroom.7b379faf013d20a2f8c2.glb",
+    "static/media/tile2.jpg": "/bathroom/static/media/tile2.7d2860426d8dd8ca83ac.jpg",
+    "static/media/grass.jpg": "/bathroom/static/media/grass.9af6c65fb92f02c12954.jpg",
+    "static/media/tile6.jpg": "/bathroom/static/media/tile6.b33a3310c8448eccaabc.jpg",
+    "static/media/tile7.jpg": "/bathroom/static/media/tile7.ab37bfb7e05c43a670b2.jpg",
+    "static/media/tile4.jpg": "/bathroom/static/media/tile4.ae8ee775f91e71b70522.jpg",
+    "static/media/tile5.jpg": "/bathroom/static/media/tile5.6393dfe8d9818bef66f5.jpg",
+    "static/media/water.jpg": "/bathroom/static/media/water.a155a802efeaa2e3e265.jpg",
+    "index.html": "/bathroom/index.html",
+    "static/media/icons.svg": "/bathroom/static/media/icons.bf54dd29382c0b100abdeb6c6aa6f889.svg",
+    "main.ccd2e24b.css.map": "/bathroom/static/css/main.ccd2e24b.css.map",
+    "main.b113d511.js.map": "/bathroom/static/js/main.b113d511.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ccd2e24b.css",
+    "static/js/main.b113d511.js"
+  ]
+}
