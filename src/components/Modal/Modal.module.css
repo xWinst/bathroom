@@ -9,6 +9,7 @@
   align-items: center;
   padding: 10px;
   z-index: 100;
+  pointer-events: none;
 }
 
 .modal {
@@ -20,6 +21,7 @@
   background-color: #a6d4a6;
   border-radius: 20px;
   box-shadow: 0 0 10px #1a2a1a;
+  pointer-events: all;
 
   animation: appear 0.3s linear;
 }

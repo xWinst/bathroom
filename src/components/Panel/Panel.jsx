@@ -11,7 +11,6 @@ const Panel = ({ submit }) => {
   const [tailHeight, setTailHeight] = useState(30);
   const [texture, setTexture] = useState(null);
 
-  console.log(textures.indexOf(texture));
   const onChange = e => {
     const { value, name } = e.target;
 

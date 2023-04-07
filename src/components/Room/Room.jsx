@@ -1,17 +1,4 @@
-// import { useState } from 'react';
-import { useGLTF } from '@react-three/drei';
-import model from 'model/bathroom.glb';
-
-const Room = ({ openPanel }) => {
-  //   const [selectedMesh, setSelectedMesh] = useState(null);
-  const { nodes } = useGLTF(model);
-  const meshes = Object.values(nodes);
-
-  const onClick = mesh => {
-    // setSelectedMesh(mesh);
-    openPanel();
-  };
-
+const Room = ({ selectMesh, meshes }) => {
   return (
     <group dispose={null}>
       <group
@@ -19,21 +6,22 @@ const Room = ({ openPanel }) => {
         scale={0.01}
         position={[0, -1.5, 2.5]}
       >
-        {meshes.map(mesh => (
+        {meshes.map((mesh, index) => (
           <mesh
             key={mesh.uuid}
             castShadow
             receiveShadow
             geometry={mesh.geometry}
             material={mesh.material}
-            onClick={() => onClick(mesh)}
+            onClick={e => {
+              e.stopPropagation();
+              selectMesh(index);
+            }}
           />
         ))}
       </group>
     </group>
   );
 };
-
-useGLTF.preload(model);
 
 export default Room;
