@@ -1,7 +1,7 @@
 .colorList {
   display: flex;
   max-width: 260px;
-  gap: 20px;
+  gap: 16px;
   flex-wrap: wrap;
 }
 

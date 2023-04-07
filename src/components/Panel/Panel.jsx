@@ -2,7 +2,14 @@ import { useState } from 'react';
 import { textures, solidTextures } from 'textures';
 import s from './Panel.module.css';
 
-const colors = ['#eeeeee', '#888888', '#101010', '#001978'];
+const colors = [
+  '#eeeeee',
+  '#888888',
+  '#101010',
+  '#f3df27',
+  '#265824',
+  '#001978',
+];
 
 const Panel = ({ submit }) => {
   const [seamColor, setSeamColor] = useState('#888888');
