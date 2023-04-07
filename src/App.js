@@ -4,7 +4,7 @@ import {
   RepeatWrapping,
   NearestFilter,
   TextureLoader,
-  MeshBasicMaterial,
+  MeshStandardMaterial,
   DoubleSide,
 } from 'three';
 import { Canvas } from '@react-three/fiber';
@@ -30,23 +30,37 @@ const App = () => {
     setShowModal(true);
   };
 
-  const createTailMesh = (texture, weidth, height, seamColor, seamSize) => {
+  const createTailMesh = (texture, width, height, seamColor, seamSize) => {
     const image = new Image();
     image.src = texture;
-    const canvas = document.createElement('canvas');
-    const ctx = canvas.getContext('2d');
-    canvas.width = image.width;
-    canvas.height = image.height;
+    const scale = image.width / Math.min(width, height);
+    const gap = seamSize * scale;
+    const vw = Math.min(1, width / height);
+    const vh = Math.min(1, height / width);
 
-    ctx.drawImage(image, 0, 0);
-    ctx.strokeStyle = seamColor;
-    ctx.lineWidth = seamSize * 38;
-    ctx.strokeRect(0, 0, canvas.width, canvas.height);
+    const canvas = document.createElement('canvas');
+    canvas.width = image.width + gap * vh;
+    canvas.height = image.height + gap * vw;
+
+    const ctx = canvas.getContext('2d');
+    ctx.fillStyle = seamColor;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.drawImage(
+      image,
+      0,
+      0,
+      image.width * vw,
+      image.height * vh,
+      gap * vh,
+      gap * vw,
+      canvas.width,
+      canvas.height
+    );
+
     const newTexture = new CanvasTexture(canvas);
 
-    newTexture.wrapS = RepeatWrapping;
-    newTexture.wrapT = RepeatWrapping;
-    newTexture.repeat.set(300 / (weidth + seamSize), 300 / (height + seamSize));
+    newTexture.repeat.set(300 / (width + seamSize), 300 / (height + seamSize));
     newTexture.magFilter = NearestFilter;
     newTexture.minFilter = NearestFilter;
 
@@ -72,13 +86,16 @@ const App = () => {
       );
     } else {
       newTexture = new TextureLoader().load(texture);
-      newTexture.wrapS = RepeatWrapping;
-      newTexture.wrapT = RepeatWrapping;
     }
+    newTexture.wrapS = RepeatWrapping;
+    newTexture.wrapT = RepeatWrapping;
     newTexture.needsUpdate = true;
     const mesh = meshes[selectedMesh];
-    mesh.material = new MeshBasicMaterial({
+    mesh.material = new MeshStandardMaterial({
       map: newTexture,
+      envMapIntensity: 0.6,
+      roughness: 0.3,
+      metalness: 0.8,
       side: DoubleSide,
     });
 
@@ -89,8 +106,8 @@ const App = () => {
     <div className="App">
       <Canvas camera={{ fov: 75, near: 0.1, far: 1000, position: [0, 0, 1] }}>
         <Suspense fallback={<Loader />}>
-          {/* <ambientLight intensity={0.005} />
-          <directionalLight color="white" position={[-1, 3, -4]} /> */}
+          <ambientLight intensity={0.3} />
+          <directionalLight color="white" position={[1, -2, -4]} />
           <Room meshes={meshes} selectMesh={selectMesh} />
           <OrbitControls />
           <Environment preset="park" background />
