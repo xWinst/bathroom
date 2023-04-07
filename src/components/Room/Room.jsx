@@ -1,12 +1,15 @@
+// import { useState } from 'react';
 import { useGLTF } from '@react-three/drei';
-import modelUrl from 'model/bathroom.glb';
+import model from 'model/bathroom.glb';
 
-const Room = () => {
-  const { nodes } = useGLTF(modelUrl);
+const Room = ({ openPanel }) => {
+  //   const [selectedMesh, setSelectedMesh] = useState(null);
+  const { nodes } = useGLTF(model);
   const meshes = Object.values(nodes);
 
   const onClick = mesh => {
-    console.log('mesh: ', mesh);
+    // setSelectedMesh(mesh);
+    openPanel();
   };
 
   return (
@@ -31,6 +34,6 @@ const Room = () => {
   );
 };
 
-useGLTF.preload(modelUrl);
+useGLTF.preload(model);
 
 export default Room;

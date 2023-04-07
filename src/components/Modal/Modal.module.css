@@ -1,0 +1,46 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  z-index: 100;
+}
+
+.modal {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 30px 20px;
+
+  background-color: #a6d4a6;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #1a2a1a;
+
+  animation: appear 0.3s linear;
+}
+
+.icon {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: block;
+  cursor: pointer;
+  pointer-events: auto;
+  stroke: #1a2a1a;
+  color: #001986;
+  z-index: 50;
+}
+
+@keyframes appear {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,52 @@
+.colorList {
+  display: flex;
+  max-width: 260px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.prop {
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.item {
+  width: 30px;
+  height: 30px;
+  padding: 2px;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.active {
+  composes: item;
+  border-color: #ff5736;
+}
+
+.color {
+  width: 100%;
+  height: 100%;
+}
+
+.flexBox {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.input {
+  width: 50px;
+}
+
+.texture {
+  width: 60px;
+  height: 60px;
+  padding: 2px;
+  border: 4px solid transparent;
+  cursor: pointer;
+}
+
+.activeTexture {
+  composes: texture;
+  border-color: #ff5736;
+}
