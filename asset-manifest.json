@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/bathroom/static/css/main.ccd2e24b.css",
-    "main.js": "/bathroom/static/js/main.b113d511.js",
+    "main.css": "/bathroom/static/css/main.a405fa46.css",
+    "main.js": "/bathroom/static/js/main.5d6e67a6.js",
     "static/media/bathroom.glb": "/bathroom/static/media/bathroom.7b379faf013d20a2f8c2.glb",
     "static/media/tile2.jpg": "/bathroom/static/media/tile2.7d2860426d8dd8ca83ac.jpg",
     "static/media/grass.jpg": "/bathroom/static/media/grass.9af6c65fb92f02c12954.jpg",
@@ -12,11 +12,11 @@
     "static/media/water.jpg": "/bathroom/static/media/water.a155a802efeaa2e3e265.jpg",
     "index.html": "/bathroom/index.html",
     "static/media/icons.svg": "/bathroom/static/media/icons.bf54dd29382c0b100abdeb6c6aa6f889.svg",
-    "main.ccd2e24b.css.map": "/bathroom/static/css/main.ccd2e24b.css.map",
-    "main.b113d511.js.map": "/bathroom/static/js/main.b113d511.js.map"
+    "main.a405fa46.css.map": "/bathroom/static/css/main.a405fa46.css.map",
+    "main.5d6e67a6.js.map": "/bathroom/static/js/main.5d6e67a6.js.map"
   },
   "entrypoints": [
-    "static/css/main.ccd2e24b.css",
-    "static/js/main.b113d511.js"
+    "static/css/main.a405fa46.css",
+    "static/js/main.5d6e67a6.js"
   ]
 }
