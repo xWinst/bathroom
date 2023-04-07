@@ -95,6 +95,7 @@ const App = () => {
           <OrbitControls />
           <Environment preset="park" background />
         </Suspense>
+        <Loader />
       </Canvas>
       {showModal && (
         <Modal close={closePanel}>

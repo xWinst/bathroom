@@ -1,20 +1,19 @@
-import { createPortal } from 'react-dom';
+import { Html } from '@react-three/drei';
 import s from './Loader.module.css';
 
-const loaderRoot = document.querySelector('#loader');
-
 const Loader = () => {
-  return createPortal(
-    <div className={s.overlay}>
-      <div className={s.spinner}>
-        <div className={s.item}></div>
-        <div className={s.item}></div>
-        <div className={s.item}></div>
-        <div className={s.item}></div>
-        <div className={s.item}></div>
+  return (
+    <Html center>
+      <div className={s.overlay}>
+        <div className={s.spinner}>
+          <div className={s.item}></div>
+          <div className={s.item}></div>
+          <div className={s.item}></div>
+          <div className={s.item}></div>
+          <div className={s.item}></div>
+        </div>
       </div>
-    </div>,
-    loaderRoot
+    </Html>
   );
 };
 

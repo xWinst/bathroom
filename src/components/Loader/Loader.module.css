@@ -1,18 +1,13 @@
 :root {
-  --loader-size: 200px;
+  --loader-size: 300px;
 }
 
 .overlay {
-  position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 100;
-  background-color: #00000080;
+  width: 600px;
+  height: 600px;
 }
 
 .spinner {

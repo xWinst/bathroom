@@ -6,7 +6,7 @@ body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.17;
   letter-spacing: 0.04em;
-  color: var(--main-color);
+  color: #222222;
 }
 
 p {
