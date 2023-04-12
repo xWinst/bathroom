@@ -1,23 +1,25 @@
 {
   "files": {
     "main.css": "/bathroom/static/css/main.a6d1344b.css",
-    "main.js": "/bathroom/static/js/main.a0a04d53.js",
+    "main.js": "/bathroom/static/js/main.7cf8b894.js",
     "static/media/bathroom.glb": "/bathroom/static/media/bathroom.7b379faf013d20a2f8c2.glb",
     "static/media/tile2.jpg": "/bathroom/static/media/tile2.b95643b8a9fb66928cdf.jpg",
     "static/media/tile6.jpg": "/bathroom/static/media/tile6.89953bee849391e567a6.jpg",
     "static/media/tile7.jpg": "/bathroom/static/media/tile7.755dac0aa54a968388ec.jpg",
     "static/media/tile4.jpg": "/bathroom/static/media/tile4.541bafcf1b182ef704ac.jpg",
     "static/media/tile5.jpg": "/bathroom/static/media/tile5.35fda01aa9c7bfccc731.jpg",
+    "static/media/normalSeam.jpg": "/bathroom/static/media/normalSeam.9a8877aaf6cc25de2adf.jpg",
     "static/media/grass.jpg": "/bathroom/static/media/grass.9af6c65fb92f02c12954.jpg",
+    "static/media/rougness.jpg": "/bathroom/static/media/rougness.860a9fb99908522aaff9.jpg",
     "static/media/tile1.jpg": "/bathroom/static/media/tile1.b30147e59f7b24649c81.jpg",
     "static/media/water.jpg": "/bathroom/static/media/water.a155a802efeaa2e3e265.jpg",
     "index.html": "/bathroom/index.html",
     "static/media/icons.svg": "/bathroom/static/media/icons.bf54dd29382c0b100abdeb6c6aa6f889.svg",
     "main.a6d1344b.css.map": "/bathroom/static/css/main.a6d1344b.css.map",
-    "main.a0a04d53.js.map": "/bathroom/static/js/main.a0a04d53.js.map"
+    "main.7cf8b894.js.map": "/bathroom/static/js/main.7cf8b894.js.map"
   },
   "entrypoints": [
     "static/css/main.a6d1344b.css",
-    "static/js/main.a0a04d53.js"
+    "static/js/main.7cf8b894.js"
   ]
 }
