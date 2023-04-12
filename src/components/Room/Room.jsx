@@ -17,7 +17,14 @@ const Room = ({ selectMesh, meshes }) => {
               e.stopPropagation();
               selectMesh(index);
             }}
-          />
+          >
+            {mesh.userData.shinyMaterial && (
+              <mesh
+                geometry={mesh.geometry}
+                material={mesh.userData.shinyMaterial}
+              />
+            )}
+          </mesh>
         ))}
       </group>
     </group>

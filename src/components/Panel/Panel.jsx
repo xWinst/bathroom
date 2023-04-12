@@ -39,7 +39,7 @@ const Panel = ({ submit }) => {
       value = seamSize;
       func = setSeamSize;
     } else {
-      min = 15;
+      min = 10;
       max = 100;
       if (name === 'tailWeidth') {
         func = setTailWeidth;
